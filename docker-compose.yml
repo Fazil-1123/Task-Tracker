@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest  # Uses the latest version of the official PostgreSQL image
+    ports:
+      - "5432:5432"  # Maps port 5432 on the host to port 5432 on the container
+    restart: always  # Always restart the container if it stops
+    environment:
+      POSTGRES_PASSWORD: secret  # Sets the environment variable for the PostgreSQL password
